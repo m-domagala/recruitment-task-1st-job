@@ -1,0 +1,11 @@
+.board {
+ width: 800px;
+ height: 990px;
+ position: absolute;
+ left: 50%;
+ bottom: 98px;
+ transform: translateX(-50%);
+ border-radius: 5px;
+ box-shadow: 0 0 37px rgba(225, 230, 255, 0.54);
+ background-color: rgb(255, 255, 255);
+}
