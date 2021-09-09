@@ -1,11 +1,9 @@
-import './App.css';
-
-const App = () => {
+export default function App() {
  return (
   <>
-   <button>+</button>
+   <div className="wrapper">
+    <main className="board"></main>
+   </div>
   </>
  );
-};
-
-export default App;
+}

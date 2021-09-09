@@ -1,0 +1,27 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+.wrapper {
+ width: 1000px;
+ height: 1435px;
+ margin: 0 auto;
+ position: relative;
+ display: grid;
+ grid-template-columns: repeat(8, 132px) 0;
+ column-gap: 18px;
+ padding-left: 59px;
+ background-color: royalblue;
+}
+
+.board {
+ width: 800px;
+ height: 990px;
+ position: absolute;
+ left: 50%;
+ bottom: 98px;
+ transform: translateX(-50%);
+ background-color: rgba(10, 10, 10, 0.5);
+}
