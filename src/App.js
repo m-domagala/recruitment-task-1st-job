@@ -1,12 +1,12 @@
 import BackgroundElements from './components/BackgroundElements';
-import Board from './components/Board';
+import Panel from './components/Panel';
 import HiddenElements from './components/HiddenElements';
 
 export default function App() {
  return (
   <>
-   <div className="app">
-    <Board />
+   <div className="wrapper">
+    <Panel />
     <BackgroundElements />
     <HiddenElements />
    </div>

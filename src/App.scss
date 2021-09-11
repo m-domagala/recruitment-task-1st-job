@@ -4,13 +4,14 @@
  box-sizing: border-box;
 }
 
-.app {
- width: 1000px;
+.wrapper {
  height: 1435px;
+ width: 1000px;
  margin: 0 auto;
  position: relative;
  display: grid;
  grid-template-columns: repeat(8, 132px) 0;
  column-gap: 18px;
  padding-left: 59px;
+ overflow: hidden;
 }
