@@ -2,16 +2,16 @@ export default function BackgroundElements() {
  return (
   <>
    <div className="background-elements">
-    <div className="line">
-     <div className="line__line-element"></div>
+    <div className="mask-left">
+     <div className="mask-left__line">
+      <div className="mask-left__line-element"></div>
+     </div>
     </div>
-
-    <div className="mask-left"></div>
 
     <div className="mask-right"></div>
 
     <div className="snake">
-     <div className="snake__container">
+     <div className="snake__flex-container">
       <div className="snake__element-1">
        <div className="snake__blank-1"></div>
       </div>

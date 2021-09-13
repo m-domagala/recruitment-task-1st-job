@@ -2,24 +2,6 @@
  position: absolute;
 }
 
-.line {
- top: 235px;
- left: 71px;
- height: 50px;
- width: 50px;
- z-index: 2;
- &__line-element {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 10px;
-  width: 78px;
-  transform: translate(calc(-50% - 0.5px), calc(-50% - 0.5px)) rotate(45deg);
-  border-radius: 5px;
-  background-color: #ffffff;
- }
-}
-
 .mask-left {
  top: 29px;
  left: -249px;
@@ -29,6 +11,24 @@
  background-image: url('../assets/svg/mask-copy-3.svg');
  background-repeat: no-repeat;
  background-position: 151% 48.5%;
+ &__line {
+  position: absolute;
+  top: 206px;
+  left: 320px;
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  &-element {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   height: 10px;
+   width: 78px;
+   transform: translate(calc(-50% - 0.5px), calc(-50% - 0.5px)) rotate(45deg);
+   border-radius: 5px;
+   background-color: #ffffff;
+  }
+ }
 }
 
 .mask-right {
@@ -44,13 +44,13 @@
 .snake {
  $snake-size: 19px;
  $snake-border: 10px;
- top: 519px;
+ top: 520px;
  left: -39px;
  height: 39px;
  width: 124px;
  transform: rotate(-41deg);
  background: linear-gradient(309.45deg, #2f3bff 0%, #ce90d8 100%);
- &__container {
+ &__flex-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
