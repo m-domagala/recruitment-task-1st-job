@@ -1,7 +1,14 @@
+@import 'Board.scss';
+@import 'Button.scss';
+@import 'CellMain.scss';
+@import 'CellSmall.scss';
+@import 'Ethnicity.scss';
+@import 'Modal.scss';
+
 .panel-container {
  overflow-y: auto;
  position: absolute;
- bottom: 98px;
+ top: 347px;
  left: 100px;
  height: 990px;
  width: 800px;
@@ -47,20 +54,12 @@
  }
 }
 
-.board {
- width: 426px;
- align-self: flex-end;
- right: 0;
- height: 536px;
- background-color: rgba(0, 0, 0, 0.1);
-}
-
-.line {
+.line-main {
  position: absolute;
  top: 153px;
- left: 150px;
+ left: 149px;
  height: calc(100% - 324px);
- width: 0.5px;
+ width: 1px;
  background-color: #4b597b;
  opacity: 0.3;
 }

@@ -3,7 +3,7 @@ export default function Header() {
   <>
    <header>
     <div className="title">
-     <h1 className="title__heading">Zadanie rekrutacyjne</h1>
+     <h1 className="title__text">Zadanie rekrutacyjne</h1>
     </div>
 
     <div className="logo">

@@ -17,17 +17,17 @@
 }
 
 .button__type-2 {
- position: relative;
  height: 40px;
  width: 40px;
  background: linear-gradient(0deg, #27e7e7 0%, #f4ff51 210%);
  box-shadow: 0 12px 12px 0 rgba(61, 234, 214, 0.3);
  & .sign {
   position: absolute;
-  top: 13.16px;
-  left: 13.31px;
   height: 13.79px;
   width: 13.82px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   &:before,
   &:after {
    content: '';
@@ -65,11 +65,14 @@
   &:before {
    content: '+';
    position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+   top: -4px;
+   left: 21px;
+   height: 80px;
+   width: 31px;
+   line-height: 80px;
    font-family: 'brandon', sans-serif;
    font-size: 56px;
+   letter-spacing: 0.99px;
    color: white;
    text-shadow: 0 2px 4px #12c8bf;
   }

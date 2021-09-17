@@ -10,25 +10,25 @@ export default function BackgroundElements() {
 
     <div className="mask-right"></div>
 
-    <div className="snake">
-     <div className="snake__flex-container">
-      <div className="snake__element-1">
-       <div className="snake__blank-1"></div>
+    <div className="shape-snake">
+     <div className="shape-snake__flex-container">
+      <div className="shape-snake__element-1">
+       <div className="shape-snake__blank-1"></div>
       </div>
-      <div className="snake__element-2">
-       <div className="snake__blank-2">
-        <div className="snake__shadow"></div>
+      <div className="shape-snake__element-2">
+       <div className="shape-snake__blank-2">
+        <div className="shape-snake__shadow"></div>
        </div>
       </div>
-      <div className="snake__element-3">
-       <div className="snake__blank-3"></div>
+      <div className="shape-snake__element-3">
+       <div className="shape-snake__blank-3"></div>
       </div>
      </div>
     </div>
 
-    <div className="spinner">
-     <div className="spinner__spinner-element"></div>
-     <div className="spinner__blank"></div>
+    <div className="shape-spinner">
+     <div className="shape-spinner__spinner"></div>
+     <div className="shape-spinner__blank"></div>
     </div>
    </div>
   </>

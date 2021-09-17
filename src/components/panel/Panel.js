@@ -1,6 +1,54 @@
+import React, { useState } from 'react';
+import Board from './Board';
 import Button from './Button';
+import Modal from './Modal';
+
+export const generateID = () => {
+ return '_' + Math.random().toString(36).substr(2, 9);
+};
+
+const initialInfos = [
+ {
+  id: generateID(),
+  type: 'basicCell',
+  title: 'Age 40+',
+ },
+ {
+  id: generateID(),
+  type: 'advancedCell',
+  title: 'Ethnicity',
+ },
+ {
+  id: generateID(),
+  type: 'basicCell',
+  title: 'Income yearly 45k USD+',
+ },
+];
 
 export default function Panel() {
+ const [infos, setInfos] = useState(initialInfos);
+ const [modal, setModal] = useState(false);
+
+ const handleAddCell = (inputValue, checkboxValue) => {
+  setInfos((prevInfos) => {
+   return [
+    ...prevInfos,
+    {
+     id: generateID(),
+     type: checkboxValue ? 'advancedCell' : 'basicCell',
+     title: inputValue,
+    },
+   ];
+  });
+  setModal((prevModal) => !prevModal);
+ };
+
+ const handleRemoveCell = (targetID) => {
+  setInfos((prevInfos) => {
+   return prevInfos.filter((info) => info.id !== targetID);
+  });
+ };
+
  return (
   <>
    <main className="panel-container">
@@ -10,12 +58,13 @@ export default function Panel() {
        <p className="top-area__people-text">People</p>
       </div>
      </div>
-     <div className="board"></div>
-     <div className="line"></div>
+     <Board infos={infos} removeCell={handleRemoveCell} />
+     <div className="line-main"></div>
      <div className="bottom-area">
-      <Button addClass={'bottom-area__button'} btnType={'3'} />
+      <Button onClick={() => setModal((prevModal) => !prevModal)} addClass={'bottom-area__button'} btnType="3" />
      </div>
     </div>
+    {modal && <Modal handleAddCell={handleAddCell} />}
    </main>
   </>
  );
