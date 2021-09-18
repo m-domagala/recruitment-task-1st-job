@@ -5,55 +5,125 @@
  right: 0;
  bottom: 0;
  left: 0;
+ z-index: 9;
 }
 
 .modal {
  &__overlay {
-  opacity: 0.2;
+  opacity: 0.4;
   background: linear-gradient(312.39deg, #ed88ff -32%, #1868f1 100%);
  }
  &__content {
   position: relative;
+  z-index: 10;
   top: 50%;
   left: 50%;
   height: 100px;
   width: 380px;
   transform: translate(-50%, -50%);
-  border-radius: 7px;
+  border-radius: 4px;
   font-family: 'poppins', sans-serif;
   font-weight: 500;
-  background: linear-gradient(312.39deg, lighten(#ed88ff, 15%) -32%, lighten(#1868f1, 25%) 100%);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(312.39deg, lighten(#ed88ff, 5%) -32%, lighten(#1868f1, 10%) 100%);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
  }
- &__checkbox {
-  position: absolute;
-  top: 17px;
-  left: 230px;
-  height: 20px;
-  width: 20px;
-  // opacity: 0;
+
+ .checkbox-container {
+  position: relative;
+  top: 10px;
+  left: 90px;
+  padding-left: 35px;
+  margin-bottom: 12px;
   cursor: pointer;
-  &-label {
+  font-size: 18px;
+  user-select: none;
+  & input {
    position: absolute;
-   top: 15px;
-   left: 90px;
+   opacity: 0;
+   cursor: pointer;
+   height: 0;
+   width: 0;
   }
  }
+
+ .checkbox-checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+ }
+
+ .checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+ }
+
+ .checkbox-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 1px solid black;
+ }
+
+ .checkbox-container:hover input ~ .checkbox-checkmark {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid black;
+ }
+
+ .checkbox-container input:checked ~ .checkbox-checkmark {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid black;
+ }
+
+ .checkbox-checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+ }
+
+ .checkbox-container input:checked ~ .checkbox-checkmark:after {
+  display: block;
+ }
+
+ .checkbox-container .checkbox-checkmark:after {
+  left: 5px;
+  top: -0.5px;
+  width: 8px;
+  height: 15px;
+  border: solid black;
+  border-width: 0 3.5px 3.5px 0;
+  transform: rotate(30deg);
+ }
+
  &__input {
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translatex(-50%);
   height: 30px;
-  width: 250px;
+  width: 252px;
   line-height: 30px;
   font-size: 17px;
+  text-indent: 4px;
   border-radius: 2px;
   outline: none;
   border: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   &:focus {
    border: 2px solid black;
+  }
+ }
+}
+
+.ethnicity .modal {
+ &__checkbox {
+  display: none;
+  &-label {
+   display: none;
   }
  }
 }

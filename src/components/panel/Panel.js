@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Board from './Board';
 import Button from './Button';
 import Modal from './Modal';
@@ -29,6 +29,11 @@ export default function Panel() {
  const [infos, setInfos] = useState(initialInfos);
  const [modal, setModal] = useState(false);
 
+ const toggleModal = () => {
+  setModal((prevModal) => !prevModal);
+  document.body.classList.remove('active-modal');
+ };
+
  const handleAddCell = (inputValue, checkboxValue) => {
   setInfos((prevInfos) => {
    return [
@@ -40,7 +45,6 @@ export default function Panel() {
     },
    ];
   });
-  setModal((prevModal) => !prevModal);
  };
 
  const handleRemoveCell = (targetID) => {
@@ -64,7 +68,7 @@ export default function Panel() {
       <Button onClick={() => setModal((prevModal) => !prevModal)} addClass={'bottom-area__button'} btnType="3" />
      </div>
     </div>
-    {modal && <Modal handleAddCell={handleAddCell} />}
+    {modal && <Modal type="advanced" handleAddCell={handleAddCell} maxLength="15" toggleModal={toggleModal} modal={modal} />}
    </main>
   </>
  );
