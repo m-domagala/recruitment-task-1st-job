@@ -48,9 +48,14 @@ export default function Modal(props) {
        <input type="checkbox" className="checkbox" onChange={handleCheckboxToggle} />
        <span className="checkbox-checkmark"></span>
       </label>
-
-      <input ref={inputRef} type="text" maxLength={props.maxLength} className="modal__input" autoFocus value={inputValue} onChange={handleInputChange} />
+      <input ref={inputRef} type="text" pattern="^[a-zA-Z1-9].*" required maxLength={props.maxLength} className="modal__input" autoFocus value={inputValue} onChange={handleInputChange} />
+      <button className="modal__button-add" type="submit">
+       Add
+      </button>
      </form>
+     <button className="modal__button-close" onClick={props.toggleModal}>
+      X
+     </button>
     </div>
    </div>
   </>
