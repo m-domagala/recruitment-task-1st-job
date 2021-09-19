@@ -29,9 +29,9 @@ export default function Panel() {
  const [infos, setInfos] = useState(initialInfos);
  const [modal, setModal] = useState(false);
 
- const toggleModal = () => {
+ const handleModalToggle = () => {
   setModal((prevModal) => !prevModal);
-  document.body.classList.remove('active-modal');
+  document.body.classList.toggle('active-modal');
  };
 
  const handleAddCell = (inputValue, checkboxValue) => {
@@ -65,10 +65,10 @@ export default function Panel() {
      <Board infos={infos} removeCell={handleRemoveCell} />
      <div className="line-main"></div>
      <div className="bottom-area">
-      <Button onClick={() => setModal((prevModal) => !prevModal)} addClass={'bottom-area__button'} btnType="3" />
+      <Button onClick={handleModalToggle} addClass={'bottom-area__button'} btnType="3" />
      </div>
     </div>
-    {modal && <Modal type="advanced" handleAddCell={handleAddCell} maxLength="15" toggleModal={toggleModal} modal={modal} />}
+    {modal && <Modal type="advanced" handleAddCell={handleAddCell} maxLength="15" handleModalToggle={handleModalToggle} modal={modal} />}
    </main>
   </>
  );

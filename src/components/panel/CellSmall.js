@@ -6,7 +6,7 @@ export default function CellSmall(props) {
    <li className="ethnicity__list-item">
     <p className="ethnicity__list-item-or">Or</p>
     {props.ethnicity.title}
-    <Button onClick={() => props.handleRemoveSmallCell(props.ethnicity.id)} addClass={'ethnicity__list-item-button'} btnType="1" />
+    <Button onClick={() => props.handleRemoveCellSmall(props.ethnicity.id)} addClass={'ethnicity__list-item-button'} btnType="1" />
    </li>
   </>
  );

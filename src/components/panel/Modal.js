@@ -5,19 +5,17 @@ export default function Modal(props) {
  const [checkboxValue, setCheckboxValue] = useState(false);
  const inputRef = useRef();
 
- document.body.classList.add('active-modal');
-
  useEffect(() => {
-  const keyboardBehavior = (e) => {
+  const handleKeyboardBehavior = (e) => {
    if (e.key === 'Escape') {
-    props.toggleModal();
+    props.handleModalToggle();
    } else if (e.key === 'Tab') {
     e.preventDefault();
    }
   };
-  document.addEventListener('keydown', keyboardBehavior);
+  document.addEventListener('keydown', handleKeyboardBehavior);
   return () => {
-   document.removeEventListener('keydown', keyboardBehavior);
+   document.removeEventListener('keydown', handleKeyboardBehavior);
   };
  });
 
@@ -34,13 +32,13 @@ export default function Modal(props) {
   e.preventDefault();
   props.handleAddCell(inputValue, checkboxValue);
   setInputValue('');
-  props.toggleModal();
+  props.handleModalToggle();
  };
 
  return (
   <>
    <div className="modal">
-    <div className="modal__overlay" onClick={props.toggleModal}></div>
+    <div className="modal__overlay" onClick={props.handleModalToggle}></div>
     <div className="modal__content">
      <form className="modal__form" type="submit" onSubmit={handleSubmit}>
       <label className="checkbox-container">
@@ -53,7 +51,7 @@ export default function Modal(props) {
        Add
       </button>
      </form>
-     <button className="modal__button-close" onClick={props.toggleModal}>
+     <button className="modal__button-close" onClick={props.handleModalToggle}>
       X
      </button>
     </div>
