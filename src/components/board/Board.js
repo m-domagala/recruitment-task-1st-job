@@ -1,12 +1,12 @@
 import { useRef } from 'react';
+import CellAdvanced from './CellAdvanced';
 import CellMain from './CellMain';
-import Ethnicity from './Ethnicity';
-import { generateID } from './Panel';
+import { generateID } from '../Panel';
 
 export default function Board(props) {
  const firstRender = useRef(true);
 
- const initialEthnicities = () => {
+ const initialData = () => {
   if (firstRender.current) {
    return [
     {
@@ -29,10 +29,10 @@ export default function Board(props) {
   <>
    <ul className="board">
     {props.infos.map((info) => {
-     if (info.type === 'basicCell') {
-      return <CellMain key={info.id} info={info} removeCell={props.removeCell} />;
+     if (info.type === 'cellMain') {
+      return <CellMain key={info.id} info={info} handleRemoveCell={props.handleRemoveCell} />;
      }
-     return <Ethnicity key={info.id} info={info} removeCell={props.removeCell} initialEthnicities={initialEthnicities} firstRender={firstRender.current} handleFirstRender={handleFirstRender} />;
+     return <CellAdvanced key={info.id} info={info} handleRemoveCell={props.handleRemoveCell} initialData={initialData} firstRender={firstRender.current} handleFirstRender={handleFirstRender} />;
     })}
    </ul>
   </>

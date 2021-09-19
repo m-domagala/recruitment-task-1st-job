@@ -11,6 +11,7 @@
  background-image: url('../assets/svg/mask-copy-3.svg');
  background-repeat: no-repeat;
  background-position: 151% 48.5%;
+
  &__line {
   position: absolute;
   top: 206px;
@@ -50,28 +51,33 @@
  width: 124px;
  transform: rotate(-41deg);
  background: linear-gradient(309.45deg, #2f3bff 0%, #ce90d8 100%);
+
  &__flex-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
  }
+
  &__element-1,
  &__element-2,
  &__element-3 {
   box-sizing: content-box;
-  width: $snake-size;
   height: $snake-size;
+  width: $snake-size;
   border-radius: 50%;
   border: $snake-border solid transparent;
  }
+
  &__element-1 {
   transform: translateX($snake-border + 1.8px) rotate(45deg);
   border-bottom: $snake-border solid white;
   box-shadow: #ffffff 0px 0px 0px, #ffffff -19.5px 7px 0px 20px;
  }
+
  &__element-2 {
   box-shadow: #ffffff 0px 0px 0px, #ffffff 0px 35px 0px 20px;
  }
+
  &__element-3 {
   position: relative;
   z-index: 1;
@@ -89,6 +95,7 @@
    background-color: #5651f0;
   }
  }
+
  &__blank-1,
  &__blank-2,
  &__blank-3 {
@@ -97,9 +104,11 @@
   border-radius: 50%;
   background-color: white;
  }
+
  &__blank-2 {
   position: relative;
  }
+
  &__shadow {
   position: absolute;
   top: 50%;
@@ -121,6 +130,7 @@
  transform: rotate(-93deg);
  border-radius: 50%;
  background: linear-gradient(312.39deg, #b283f7 0%, #1868f1f0 100%);
+
  &__spinner {
   box-sizing: content-box;
   position: absolute;
@@ -144,6 +154,7 @@
    box-shadow: white 0px 0px 0px, white -20px 24px 0px 27px;
   }
  }
+
  &__blank {
   position: absolute;
   top: 50%;

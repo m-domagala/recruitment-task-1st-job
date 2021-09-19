@@ -1,0 +1,29 @@
+.cell-main {
+ position: relative;
+ height: 79px;
+ width: 426px;
+ list-style: none;
+ border-radius: 7px;
+ box-shadow: 0 7px 23px 0 rgba(186, 184, 230, 0.31);
+
+ &__text {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  height: 28px;
+  width: 315px;
+  transform: translateY(-50%);
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.35px;
+  color: #4b597b;
+ }
+
+ &__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 371.5px;
+ }
+}

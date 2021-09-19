@@ -1,0 +1,13 @@
+@import './CellAdvanced.scss';
+@import './CellMain.scss';
+@import './CellSmall.scss';
+@import '../common.scss';
+
+.board {
+ display: grid;
+ row-gap: 40px;
+ align-self: flex-end;
+ width: 426px;
+ font-family: 'poppins', sans-serif;
+ font-weight: bold;
+}

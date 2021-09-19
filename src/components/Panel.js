@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Board from './Board';
+import Board from './board/Board';
 import Button from './Button';
 import Modal from './Modal';
 
@@ -10,17 +10,17 @@ export const generateID = () => {
 const initialInfos = [
  {
   id: generateID(),
-  type: 'basicCell',
+  type: 'cellMain',
   title: 'Age 40+',
  },
  {
   id: generateID(),
-  type: 'advancedCell',
+  type: 'cellAdvanced',
   title: 'Ethnicity',
  },
  {
   id: generateID(),
-  type: 'basicCell',
+  type: 'cellMain',
   title: 'Income yearly 45k USD+',
  },
 ];
@@ -29,7 +29,7 @@ export default function Panel() {
  const [infos, setInfos] = useState(initialInfos);
  const [modal, setModal] = useState(false);
 
- const handleModalToggle = () => {
+ const handleToggleModal = () => {
   setModal((prevModal) => !prevModal);
   document.body.classList.toggle('active-modal');
  };
@@ -40,7 +40,7 @@ export default function Panel() {
     ...prevInfos,
     {
      id: generateID(),
-     type: checkboxValue ? 'advancedCell' : 'basicCell',
+     type: checkboxValue ? 'cellAdvanced' : 'cellMain',
      title: inputValue,
     },
    ];
@@ -62,13 +62,13 @@ export default function Panel() {
        <p className="top-area__people-text">People</p>
       </div>
      </div>
-     <Board infos={infos} removeCell={handleRemoveCell} />
+     <Board infos={infos} handleRemoveCell={handleRemoveCell} />
      <div className="line-main"></div>
      <div className="bottom-area">
-      <Button onClick={handleModalToggle} addClass={'bottom-area__button'} btnType="3" />
+      <Button onClick={handleToggleModal} addClass={'bottom-area__button'} btnType="3" />
      </div>
     </div>
-    {modal && <Modal type="advanced" handleAddCell={handleAddCell} maxLength="15" handleModalToggle={handleModalToggle} modal={modal} />}
+    {modal && <Modal maxLength="15" type="advanced" handleAddCell={handleAddCell} handleToggleModal={handleToggleModal} modal={modal} />}
    </main>
   </>
  );

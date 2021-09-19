@@ -1,0 +1,40 @@
+.and,
+.or {
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+ opacity: 0.4;
+ color: #4b597b;
+ font-weight: 500;
+ font-size: 20px;
+ letter-spacing: 0.35px;
+ line-height: 30px;
+}
+
+.and {
+ left: -143px;
+ height: 28px;
+ width: 42px;
+}
+
+.border {
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 12px;
+ border-radius: 7px 0 0 7px;
+ background: linear-gradient(0deg, #7176f7 0%, #ca75f1 180%);
+ box-shadow: 0 7px 19px 0 rgba(125, 118, 246, 0.31);
+ &:before {
+  content: '';
+  display: block;
+  position: relative;
+  top: 50%;
+  left: -75px;
+  height: 0.8px;
+  width: 75px;
+  background-color: #4b597b;
+  opacity: 0.3;
+ }
+}
