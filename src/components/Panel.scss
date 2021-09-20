@@ -24,7 +24,7 @@
  width: 100%;
  margin-bottom: 73px;
 
- &__people {
+ &__category {
   height: 80px;
   width: 300px;
   padding-bottom: 3px;
@@ -32,6 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
   border-radius: 7px;
   background: linear-gradient(0deg, #7176f7 0%, #ca75f1 180%);
   box-shadow: 0 7px 19px 0 rgba(125, 118, 246, 0.31);
@@ -54,7 +55,7 @@
  top: 153px;
  left: 149px;
  height: calc(100% - 324px);
- width: 0.8px;
+ width: $line-thickness;
  background-color: #4b597b;
  opacity: 0.3;
 }

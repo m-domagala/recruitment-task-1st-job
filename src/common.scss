@@ -1,8 +1,11 @@
+$line-thickness: 0.8px;
+
 .and,
 .or {
  position: absolute;
  top: 50%;
  transform: translateY(-50%);
+ user-select: none;
  opacity: 0.4;
  color: #4b597b;
  font-weight: 500;
@@ -32,7 +35,7 @@
   position: relative;
   top: 50%;
   left: -75px;
-  height: 0.8px;
+  height: $line-thickness;
   width: 75px;
   background-color: #4b597b;
   opacity: 0.3;
