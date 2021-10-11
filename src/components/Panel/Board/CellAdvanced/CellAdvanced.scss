@@ -1,3 +1,5 @@
+@import 'CellSmall/CellSmall.scss';
+
 .cell-advanced {
  position: relative;
  height: auto;
@@ -6,7 +8,7 @@
  border-radius: 7px;
  box-shadow: 0 7px 23px 0 rgba(186, 184, 230, 0.31);
 
- &__list {
+ .cell-advanced__list {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -16,8 +18,8 @@
   padding-bottom: 70.5px;
  }
 
- &__list-add,
- &__list-item {
+ .cell-advanced__list-add,
+ .cell-advanced__list-item {
   height: 51px;
   font-size: 20px;
   line-height: 51px;
@@ -26,19 +28,19 @@
   border: 1px solid rgba(75, 89, 123, 0.3);
  }
 
- &__list-add {
+ .cell-advanced__list-add {
   overflow: hidden;
   width: 293px;
   margin: 29.5px 0px 27px 38.5px;
  }
 
- &__list-item {
+ .cell-advanced__list-item {
   position: relative;
   width: 280px;
   margin: 0px 0px 9px 115.5px;
  }
 
- &__line {
+ .cell-advanced__line {
   position: absolute;
   top: 80.5px;
   left: 87px;
@@ -48,13 +50,13 @@
   opacity: 0.3;
  }
 
- &__button-remove {
+ .cell-advanced__button-remove {
   position: absolute;
   top: 40px;
   right: 41px;
  }
 
- &__button-add {
+ .cell-advanced__button-add {
   position: absolute;
   top: calc(100% - 64px);
   left: 67.5px;

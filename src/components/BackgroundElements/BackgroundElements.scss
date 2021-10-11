@@ -12,14 +12,15 @@
  background-repeat: no-repeat;
  background-position: 151% 48.5%;
 
- &__line {
+ .mask-left__line {
   position: absolute;
   top: 206px;
   left: 320px;
   height: 50px;
   width: 50px;
   z-index: 2;
-  &-element {
+
+  .mask-left__line-element {
    position: absolute;
    top: 50%;
    left: 50%;
@@ -52,15 +53,15 @@
  transform: rotate(-41deg);
  background: linear-gradient(309.45deg, #2f3bff 0%, #ce90d8 100%);
 
- &__flex-container {
+ .shape-snake__flex-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
  }
 
- &__element-1,
- &__element-2,
- &__element-3 {
+ .shape-snake__element-1,
+ .shape-snake__element-2,
+ .shape-snake__element-3 {
   box-sizing: content-box;
   height: $snake-size;
   width: $snake-size;
@@ -68,17 +69,17 @@
   border: $snake-border solid transparent;
  }
 
- &__element-1 {
+ .shape-snake__element-1 {
   transform: translateX($snake-border + 1.8px) rotate(45deg);
   border-bottom: $snake-border solid white;
   box-shadow: #ffffff 0px 0px 0px, #ffffff -19.5px 7px 0px 20px;
  }
 
- &__element-2 {
+ .shape-snake__element-2 {
   box-shadow: #ffffff 0px 0px 0px, #ffffff 0px 35px 0px 20px;
  }
 
- &__element-3 {
+ .shape-snake__element-3 {
   position: relative;
   z-index: 1;
   transform: translate(-$snake-border - 1.8px) rotate(-45deg);
@@ -96,20 +97,20 @@
   }
  }
 
- &__blank-1,
- &__blank-2,
- &__blank-3 {
+ .shape-snake__blank-1,
+ .shape-snake__blank-2,
+ .shape-snake__blank-3 {
   height: $snake-size;
   width: $snake-size;
   border-radius: 50%;
   background-color: white;
  }
 
- &__blank-2 {
+ .shape-snake__blank-2 {
   position: relative;
  }
 
- &__shadow {
+ .shape-snake__shadow {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -131,7 +132,7 @@
  border-radius: 50%;
  background: linear-gradient(312.39deg, #b283f7 0%, #1868f1f0 100%);
 
- &__spinner {
+ .shape-spinner__spinner {
   box-sizing: content-box;
   position: absolute;
   top: 50%;
@@ -155,7 +156,7 @@
   }
  }
 
- &__blank {
+ .shape-spinner__blank {
   position: absolute;
   top: 50%;
   left: 50%;

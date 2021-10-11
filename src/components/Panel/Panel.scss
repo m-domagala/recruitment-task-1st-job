@@ -1,3 +1,6 @@
+@import 'common/common.scss';
+@import 'Board/Board.scss';
+
 .panel-container {
  overflow-y: auto;
  position: absolute;
@@ -24,7 +27,7 @@
  width: 100%;
  margin-bottom: 73px;
 
- &__category {
+ .top-area__category {
   height: 80px;
   width: 300px;
   padding-bottom: 3px;
@@ -37,7 +40,7 @@
   background: linear-gradient(0deg, #7176f7 0%, #ca75f1 180%);
   box-shadow: 0 7px 19px 0 rgba(125, 118, 246, 0.31);
 
-  &-text {
+  .top-area__category-text {
    height: 35px;
    width: 90px;
    font-family: 'poppins';
@@ -65,7 +68,7 @@
  margin-top: 58px;
  margin-bottom: 75px;
 
- &__button {
+ .bottom-area__button {
   top: 0;
   left: 101.5px;
  }
