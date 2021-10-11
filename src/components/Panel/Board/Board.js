@@ -3,7 +3,7 @@ import CellAdvanced from './CellAdvanced/CellAdvanced';
 import CellMain from './CellMain/CellMain';
 import { generateID } from '../Panel';
 
-export default function Board(props) {
+export default function Board({ handleRemoveCell, infos }) {
  const firstRender = useRef(true);
 
  const initialData = () => {
@@ -28,11 +28,11 @@ export default function Board(props) {
  return (
   <>
    <ul className="board">
-    {props.infos.map((info) => {
+    {infos.map((info) => {
      if (info.type === 'cellMain') {
-      return <CellMain key={info.id} info={info} handleRemoveCell={props.handleRemoveCell} />;
+      return <CellMain key={info.id} handleRemoveCell={handleRemoveCell} info={info} />;
      }
-     return <CellAdvanced key={info.id} info={info} handleRemoveCell={props.handleRemoveCell} initialData={initialData} firstRender={firstRender.current} handleFirstRender={handleFirstRender} />;
+     return <CellAdvanced key={info.id} firstRender={firstRender.current} handleFirstRender={handleFirstRender} handleRemoveCell={handleRemoveCell} info={info} initialData={initialData} />;
     })}
    </ul>
   </>

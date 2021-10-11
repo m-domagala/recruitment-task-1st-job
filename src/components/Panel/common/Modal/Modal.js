@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-export default function Modal(props) {
+export default function Modal({ handleAddCell, handleToggleModal, maxLength }) {
  const [inputValue, setInputValue] = useState('');
  const [checkboxValue, setCheckboxValue] = useState(false);
  const inputRef = useRef();
@@ -8,7 +8,7 @@ export default function Modal(props) {
  useEffect(() => {
   const handleKeyboardBehavior = (e) => {
    if (e.key === 'Escape') {
-    props.handleToggleModal();
+    handleToggleModal();
    } else if (e.key === 'Tab') {
     e.preventDefault();
    }
@@ -24,21 +24,21 @@ export default function Modal(props) {
  };
 
  const handleToggleCheckbox = () => {
-  setCheckboxValue((prevModal) => !prevModal);
+  setCheckboxValue((prevValue) => !prevValue);
   inputRef.current.focus();
  };
 
  const handleSubmit = (e) => {
   e.preventDefault();
-  props.handleAddCell(inputValue, checkboxValue);
+  handleAddCell(inputValue, checkboxValue);
   setInputValue('');
-  props.handleToggleModal();
+  handleToggleModal();
  };
 
  return (
   <>
    <div className="modal">
-    <div className="modal__overlay" onClick={props.handleToggleModal}></div>
+    <div className="modal__overlay" onClick={handleToggleModal}></div>
     <div className="modal__content">
      <form className="modal__form" type="submit" onSubmit={handleSubmit}>
       <label className="checkbox-container">
@@ -46,12 +46,12 @@ export default function Modal(props) {
        <input type="checkbox" className="checkbox" onChange={handleToggleCheckbox} />
        <span className="checkbox-checkmark"></span>
       </label>
-      <input ref={inputRef} type="text" maxLength={props.maxLength} className="modal__input" autoFocus value={inputValue} onChange={handleChangeInput} />
+      <input ref={inputRef} type="text" maxLength={maxLength} className="modal__input" autoFocus value={inputValue} onChange={handleChangeInput} />
       <button className="modal__button-add" type="submit">
        Add
       </button>
      </form>
-     <button className="modal__button-close" onClick={props.handleToggleModal}>
+     <button className="modal__button-close" onClick={handleToggleModal}>
       X
      </button>
     </div>

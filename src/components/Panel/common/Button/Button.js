@@ -1,8 +1,8 @@
-export default function Button(props) {
+export default function Button({ btnClassName, btnOnClick, btnType }) {
  return (
   <>
-   <button onClick={props.onClick} className={`${props.addClass} button button__type-${props.btnType}`}>
-    <div className={`button__type-${props.btnType}-sign`}></div>
+   <button onClick={btnOnClick} className={`${btnClassName} button button__type-${btnType}`}>
+    <div className={`button__type-${btnType}-sign`}></div>
    </button>
   </>
  );

@@ -1,13 +1,13 @@
 import Button from '../../common/Button/Button';
 
-export default function CellMain(props) {
+export default function CellMain({ handleRemoveCell, info }) {
  return (
   <>
    <li className="cell-main">
-    <p className="cell-main__text">{props.info.title}</p>
+    <p className="cell-main__text">{info.title}</p>
     <p className="cell-main__and and">And</p>
     <div className="cell-main__border border"></div>
-    <Button onClick={() => props.handleRemoveCell(props.info.id)} addClass={'cell-main__button'} btnType={'1'} />
+    <Button btnClassName={'cell-main__button'} btnOnClick={() => handleRemoveCell(info.id)} btnType={'1'} />
    </li>
   </>
  );

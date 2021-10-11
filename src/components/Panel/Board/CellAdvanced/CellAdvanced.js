@@ -4,13 +4,13 @@ import CellSmall from './CellSmall/CellSmall';
 import Modal from '../../common/Modal/Modal';
 import { generateID } from '../../Panel';
 
-export default function CellAdvanced(props) {
- const [data, setData] = useState(props.initialData);
+export default function CellAdvanced({ firstRender, handleFirstRender, handleRemoveCell, info, initialData }) {
+ const [data, setData] = useState(initialData);
  const [modalSmall, setModalSmall] = useState(false);
 
  useEffect(() => {
-  if (props.firstRender === true) {
-   props.handleFirstRender(false);
+  if (firstRender === true) {
+   handleFirstRender(false);
   }
   // eslint-disable-next-line react-hooks/exhaustive-deps
  }, []);
@@ -42,18 +42,18 @@ export default function CellAdvanced(props) {
   <>
    <li className="cell-advanced">
     <ul className="cell-advanced__list">
-     <p className="cell-advanced__list-add">{props.info.title}</p>
+     <p className="cell-advanced__list-add">{info.title}</p>
      {data.map((information) => {
-      return <CellSmall key={information.id} information={information} handleRemoveCellSmall={handleRemoveCellSmall} />;
+      return <CellSmall key={information.id} handleRemoveCellSmall={handleRemoveCellSmall} information={information} />;
      })}
     </ul>
     <div className="cell-advanced__border border">
      <p className="cell-advanced__and and">And</p>
     </div>
     <div className="cell-advanced__line"></div>
-    <Button onClick={() => props.handleRemoveCell(props.info.id)} action={props.action} addClass={'cell-advanced__button-remove'} btnType="1" />
-    <Button onClick={handleToggleModalSmall} addClass={'cell-advanced__button-add'} btnType="2" />
-    {modalSmall && <Modal maxLength="10" handleAddCell={handleAddCellSmall} handleToggleModal={handleToggleModalSmall} modal={modalSmall} />}
+    <Button btnClassName={'cell-advanced__button-remove'} btnOnClick={() => handleRemoveCell(info.id)} btnType="1" />
+    <Button btnClassName={'cell-advanced__button-add'} btnOnClick={handleToggleModalSmall} btnType="2" />
+    {modalSmall && <Modal handleAddCell={handleAddCellSmall} handleToggleModal={handleToggleModalSmall} maxLength="10" />}
    </li>
   </>
  );
