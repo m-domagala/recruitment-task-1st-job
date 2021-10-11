@@ -1,6 +1,6 @@
-@import './CellAdvanced.scss';
-@import './CellMain.scss';
-@import './CellSmall.scss';
+@import './CellAdvanced/CellAdvanced.scss';
+@import './CellAdvanced/CellSmall/CellSmall.scss';
+@import './CellMain/CellMain.scss';
 
 .board {
  display: grid;

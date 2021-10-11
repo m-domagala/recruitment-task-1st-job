@@ -1,6 +1,6 @@
 import { useRef } from 'react';
-import CellAdvanced from './CellAdvanced';
-import CellMain from './CellMain';
+import CellAdvanced from './CellAdvanced/CellAdvanced';
+import CellMain from './CellMain/CellMain';
 import { generateID } from '../Panel';
 
 export default function Board(props) {

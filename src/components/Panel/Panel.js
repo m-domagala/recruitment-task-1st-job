@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Board from './board/Board';
-import Button from './Button';
-import Modal from './Modal';
+import Board from './Board/Board';
+import Button from './common/Button/Button';
+import Modal from './common/Modal/Modal';
 
 export const generateID = () => {
  return '_' + Math.random().toString(36).substr(2, 9);

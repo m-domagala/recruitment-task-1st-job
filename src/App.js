@@ -1,6 +1,6 @@
-import BackgroundElements from './components/BackgroundElements';
-import Panel from './components/Panel';
-import Header from './components/Header';
+import BackgroundElements from './components/BackgroundElements/BackgroundElements';
+import Panel from './components/Panel/Panel';
+import Header from './components/Header/Header';
 
 export default function App() {
  return (

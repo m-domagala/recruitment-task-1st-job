@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import Button from '../Button';
-import CellSmall from './CellSmall';
-import Modal from '../Modal';
-import { generateID } from '../Panel';
+import Button from '../../common/Button/Button';
+import CellSmall from './CellSmall/CellSmall';
+import Modal from '../../common/Modal/Modal';
+import { generateID } from '../../Panel';
 
 export default function CellAdvanced(props) {
  const [data, setData] = useState(props.initialData);
