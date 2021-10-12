@@ -1,13 +1,13 @@
-import { useRef } from 'react';
+import { useEffect, useState } from 'react';
 import CellAdvanced from './CellAdvanced/CellAdvanced';
 import CellMain from './CellMain/CellMain';
 import { generateID } from '../Panel';
 
 export default function Board({ handleRemoveCell, infos }) {
- const firstRender = useRef(true);
+ const [firstRender, setFirstRender] = useState(true);
 
  const initialData = () => {
-  if (firstRender.current) {
+  if (firstRender) {
    return [
     {
      id: generateID(),
@@ -21,9 +21,11 @@ export default function Board({ handleRemoveCell, infos }) {
   } else return [];
  };
 
- const handleFirstRender = (value) => {
-  firstRender.current = value;
- };
+ useEffect(() => {
+  if (firstRender) {
+   setFirstRender(() => false);
+  }
+ }, [firstRender]);
 
  return (
   <>
@@ -32,7 +34,7 @@ export default function Board({ handleRemoveCell, infos }) {
      if (info.type === 'cellMain') {
       return <CellMain key={info.id} handleRemoveCell={handleRemoveCell} info={info} />;
      }
-     return <CellAdvanced key={info.id} firstRender={firstRender.current} handleFirstRender={handleFirstRender} handleRemoveCell={handleRemoveCell} info={info} initialData={initialData} />;
+     return <CellAdvanced key={info.id} handleRemoveCell={handleRemoveCell} info={info} initialData={initialData} />;
     })}
    </ul>
   </>

@@ -1,7 +1,7 @@
 export default function Button({ btnClassName, btnOnClick, btnType }) {
  return (
   <>
-   <button onClick={btnOnClick} className={`${btnClassName} button button__type-${btnType}`}>
+   <button className={`${btnClassName} button button__type-${btnType}`} onClick={btnOnClick}>
     <div className={`button__type-${btnType}-sign`}></div>
    </button>
   </>

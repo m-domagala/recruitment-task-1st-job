@@ -62,12 +62,16 @@ export default function Panel() {
        <p className="top-area__category-text">People</p>
       </div>
      </div>
+
      <Board handleRemoveCell={handleRemoveCell} infos={infos} />
+
      <div className="line-main"></div>
+
      <div className="bottom-area">
       <Button btnClassName={'bottom-area__button'} btnOnClick={handleToggleModal} btnType="3" />
      </div>
     </div>
+
     {modal && <Modal handleAddCell={handleAddCell} handleToggleModal={handleToggleModal} maxLength="22" />}
    </main>
   </>

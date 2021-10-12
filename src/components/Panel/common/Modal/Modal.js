@@ -39,18 +39,22 @@ export default function Modal({ handleAddCell, handleToggleModal, maxLength }) {
   <>
    <div className="modal">
     <div className="modal__overlay" onClick={handleToggleModal}></div>
+
     <div className="modal__content">
-     <form className="modal__form" type="submit" onSubmit={handleSubmit}>
+     <form className="modal__form" onSubmit={handleSubmit} type="submit">
       <label className="checkbox-container">
        Advanced cell?
-       <input type="checkbox" className="checkbox" onChange={handleToggleCheckbox} />
+       <input className="checkbox" onChange={handleToggleCheckbox} type="checkbox" />
        <span className="checkbox-checkmark"></span>
       </label>
-      <input ref={inputRef} type="text" maxLength={maxLength} className="modal__input" autoFocus value={inputValue} onChange={handleChangeInput} />
+
+      <input autoFocus className="modal__input" maxLength={maxLength} onChange={handleChangeInput} ref={inputRef} type="text" value={inputValue} />
+
       <button className="modal__button-add" type="submit">
        Add
       </button>
      </form>
+
      <button className="modal__button-close" onClick={handleToggleModal}>
       X
      </button>
