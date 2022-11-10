@@ -1,12 +1,27 @@
-# Recruitment Task
+## Recruitment task, which I did to get my first job
 
-In the project directory, you can run:
+### The task is to code the attached screen (InVision) using React.js with pixel perfect fidelity.
 
-### `npm start`
+Main objectives:
+1. The plus at the bottom adds another cell - a popup appears with the option to enter the text content of the cell, after confirming the content, the popup disappears and a cell is created.
+2. Plus in the Ethnicity part adds another cell to the Ethnicity part - the same operation as above.
+3. Minus to the right of Ethnicity - removes the entire part of Ethnicity.
+4. The other minuses remove the cell in which they are located.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+***
 
-### `npm run build`
+Install the project:
 
-Builds the app for production to the `build` folder.
+```bash
+npm install
+# or
+yarn
+```
+
+Run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
