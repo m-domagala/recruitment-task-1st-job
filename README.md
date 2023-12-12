@@ -1,5 +1,7 @@
 ## Recruitment task, which I did to get my first job
 
+## Preview: https://m-domagala.github.io/recruitment-task-1st-job/
+
 ### The task is to code the attached screen (InVision) using React.js with pixel perfect fidelity.
 
 Main objectives:
