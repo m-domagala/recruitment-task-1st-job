@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/recruitment-task-1st-job/static/css/main.9eff4152.css",
+    "main.js": "/recruitment-task-1st-job/static/js/main.6210b541.js",
+    "static/media/Poppins-Medium.ttf": "/recruitment-task-1st-job/static/media/Poppins-Medium.9e1bb626874ed49aa343.ttf",
+    "static/media/Poppins-Bold.ttf": "/recruitment-task-1st-job/static/media/Poppins-Bold.404e299be26d78e66794.ttf",
+    "static/media/brandon-grotesque-black-58a8a3e824392.otf": "/recruitment-task-1st-job/static/media/brandon-grotesque-black-58a8a3e824392.9ad36c335e917b52911d.otf",
+    "static/media/mask-copy-3.svg": "/recruitment-task-1st-job/static/media/mask-copy-3.71fcb43c73d3819a980e.svg",
+    "static/media/path-5.svg": "/recruitment-task-1st-job/static/media/path-5.7cf1b62702e8b53e0774.svg",
+    "index.html": "/recruitment-task-1st-job/index.html",
+    "main.9eff4152.css.map": "/recruitment-task-1st-job/static/css/main.9eff4152.css.map",
+    "main.6210b541.js.map": "/recruitment-task-1st-job/static/js/main.6210b541.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9eff4152.css",
+    "static/js/main.6210b541.js"
+  ]
+}
